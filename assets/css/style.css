@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Mukta:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to top right, #010101 0%, #060043 100%);
+}
+
+.btn-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 800px;
+  height: 60px;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 20px;
+  cursor: pointer;
+  opacity: 100;
+}
+
+.btn-show {
+  font-family: "Mukta", sans-serif;
+  color: #fff;
+  border: none;
+  background: none;
+  font-size: 2.2rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-container:hover,
+.btn-container:focus {
+  border: 3px solid #777;
+}
+
+.btn-show:hover,
+.btn-show:focus {
+  outline: none;
+  color: #777;
+}
+
+.container-crypto {
+  opacity: 0;
+  transition: 4s;
+}
+
+.coin {
+  display: flex;
+  width: 600px;
+  height: 80px;
+  border-radius: 8px;
+  margin: 38px 0;
+  font-family: "Mukta", sans-serif;
+}
+
+.coin .coin-logo {
+  width: 80px;
+  height: 100%;
+  display: grid;
+  place-items: center;
+}
+
+.coin .coin-logo img {
+  width: 80%;
+  height: 70px;
+}
+
+.coin .coin-name {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.coin .coin-name h3 {
+  color: #fff;
+  font-size: 26px;
+  text-transform: uppercase;
+}
+
+.coin .coin-name span {
+  color: #aaa;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 6px 0 0 2px;
+}
+
+.coin .coin-price {
+  display: grid;
+  align-items: center;
+  margin-left: auto;
+  padding: 8px 22px 0 0;
+  text-align: end;
+}
+
+.coin .coin-price .price {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: -6px;
+}
+
+.coin .coin-price .change {
+  color: #aaa;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: -30px;
+}
+
+.coin.increasing {
+  background: linear-gradient(90deg, #202022, #1e6e17e4);
+}
+
+.coin.increasing .coin-price .price {
+  color: #30ff20;
+}
+
+.coin.decreasing {
+  background: linear-gradient(90deg, #202020, #5d0a0a);
+}
+
+.coin.decreasing .coin-price .price {
+  color: #ff0000;
+}
